@@ -1,0 +1,34 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+GET     /api/things                 controllers.Application.awesomeThings
+GET     /api/adminThings            controllers.Application.adminThings
+GET     /api/userThings             controllers.Application.userThings
+
+#Authentication routes
+GET     /me                         controllers.Authentication.getMe
+
+POST    /login                      controllers.Authentication.loginUser
+GET     /login                      controllers.Authentication.loginFormData
+
+POST    /logout                     controllers.Authentication.logout
+
+GET     /register                   controllers.Authentication.registerFormData
+POST    /register                   controllers.Authentication.registerUser
+
+POST    /forgot                     controllers.Authentication.forgotPassword
+
+GET     /verify                     controllers.Authentication.verifyNewAccountEmail
+
+GET     /change                     controllers.Authentication.verifyPasswordResetToken
+POST    /change                     controllers.Authentication.changePassword
+
+# Map static resources from the /public folder
+GET     /app/*file                  controllers.Assets.versioned(path="/public", file)
+
+# Redirect links to attach angular
+GET     /*other                     controllers.Authentication.redirect(other)

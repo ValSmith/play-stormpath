@@ -1,0 +1,21 @@
+{
+  "form": {
+    "fields": [
+      {
+        "label": "Username or Email",
+        "placeholder": "Username or Email",
+        "required": true,
+        "type": "text",
+        "name": "login"
+      },
+      {
+        "label": "Password",
+        "placeholder": "Password",
+        "required": true,
+        "type": "password",
+        "name": "password"
+      }
+    ]
+  },
+  "accountStores": []
+}

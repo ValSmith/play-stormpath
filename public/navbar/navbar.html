@@ -1,0 +1,40 @@
+<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">dashboard</a>
+    </div>
+    <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+            <a ng-href="{{item.link}}">{{item.title}}</a>
+        </li>
+        <li if-user ng-class="{active: isActive('/profile')}">
+            <a ui-sref="profile">Profile</a>
+        </li>
+        <li if-not-user ng-class="{active: isActive('/registerPage')}">
+            <a ui-sref="registerPage">Register</a>
+        </li>
+        <li if-not-user ng-class="{active: isActive('/loginPage')}">
+            <a ui-sref="loginPage">Login</a>
+        </li>
+        <li if-user ng-class="{active: isActive('/logout')}">
+            <a ui-sref="main" sp-logout>Logout</a>
+        </li>
+        <li if-user-in-group="admins" ng-class="{active: isActive('/admin')}">
+          <a ui-sref="admin">Admin</a>
+        </li>
+        <li if-user-in-group="users" ng-class="{active: isActive('/user')}">
+          <a ui-sref="user">User</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

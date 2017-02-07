@@ -1,0 +1,42 @@
+{
+  "form": {
+    "fields": [
+      {
+        "label": "FirstName",
+        "placeholder": "FirstName",
+        "required": true,
+        "type": "text",
+        "name": "givenName"
+      },
+      {
+        "label": "LastName",
+        "placeholder": "LastName",
+        "required": true,
+        "type": "text",
+        "name": "surname"
+      },
+      {
+        "label": "Email",
+        "placeholder": "Email",
+        "required": true,
+        "type": "email",
+        "name": "email"
+      },
+      {
+        "label": "Group",
+        "placeholder" : "admins or users",
+        "required": false,
+        "type": "text",
+        "name": "group"
+      },
+      {
+        "label": "Password",
+        "placeholder": "Password",
+        "required": true,
+        "type": "password",
+        "name": "password"
+      }
+    ]
+  },
+  "accountStores": []
+}
