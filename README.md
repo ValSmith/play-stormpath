@@ -36,12 +36,13 @@ Use sbt to run the application
 ```
 sbt run
 ```
-Browse to http://localhost:9000
+Browse to https://localhost:9000
 
-## 4. Add your own endpoints
+## 4. Add your own endpoints and certificate
 
 Now you are set up to start developing.  To add a secure endpoint use the class AuthenticatedAction.  It mimics the Action class
-from the play framework.
+from the play framework.  [Play] will auto create a self signed SSL certificate which will work fine for development but 
+should be changed for production.
 
 [application.conf]:conf/application.conf
 [scala - sbt]:http://www.scala-sbt.org/ 
@@ -50,3 +51,4 @@ from the play framework.
 [Stormpath AngularJS]: https://docs.stormpath.com/angularjs/sdk/#/api 
 [AngularJS]: https://angularjs.org/
 [Scala Play framework]: https://www.playframework.com/
+[Play]:https://www.playframework.com/documentation/2.5.x/ConfiguringHttps

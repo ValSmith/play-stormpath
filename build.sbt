@@ -2,6 +2,8 @@ name := "PlayStormpath"
 
 version := "1.0"
 
+PlayKeys.devSettings := Seq("play.server.http.port" -> "disabled", "play.server.https.port" -> "9000")
+
 lazy val PlayStormpath = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.11.7"

@@ -33,7 +33,7 @@ class Authentication extends Controller{
 
       result.map(r => createAuthenticatedResponse(r._1, r._2)).getOrElse(Results.Unauthorized)
     } else {
-      Results.BadRequest
+      Results.Unauthorized
     }
   }
 
