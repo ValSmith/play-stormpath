@@ -1,4 +1,4 @@
-# play-stormpath
+# Scala Play Stormpath Authentication Template
 This project provides a template for any web application that requires user Authentication/Authorization.  The backend is 
 [Scala Play framework].  The frontend is built on [AngularJS] with [Stormpath AngularJS].  The angular ui router is used
 instead of ng route as it is required by the stormpath module. The Scala template is only used to load the index page as I have
